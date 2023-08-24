@@ -7,17 +7,11 @@ import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className="flex flex-col items-center space-y-40">
+    <div className="flex flex-col items-center space-y-32">
       <Header />
-
-      <div className="mb-4 self-center">
-        <a href="#about" className="scroll__down">
-          Scroll Down &#x2192;
-        </a>
-      </div>
       <About />
       <Experience />
-      <Footer/>
+      <Footer />
     </div>
   );
 }
