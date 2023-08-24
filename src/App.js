@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/header/Header';
+import HeaderSocials from './components/header/HeaderSocials';
+import About from './components/about/About';
+import Experience from './components/experience/Experience';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="flex flex-col items-center space-y-40">
+      <Header />
+
+     
+      <div className="mb-4 self-center">
+        <a href="#about" className="scroll__down">
+          Scroll Down &#x2192;
         </a>
-      </header>
+      </div>
+      <About />
+      <Experience />
     </div>
   );
 }
