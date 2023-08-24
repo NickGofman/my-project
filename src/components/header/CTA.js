@@ -4,7 +4,7 @@ function CTA() {
   return (
     <div className="flex items-center mt-8 cta">
       <a
-        href=""
+        href="cv"
         download
         className="btn text-color-primary hover:bg-color-white hover:text-color-bg  mr-4 transition-colors duration-300 ease-in-out p-4 rounded-md border-2"
       >
