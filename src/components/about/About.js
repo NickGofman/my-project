@@ -40,10 +40,11 @@ function About() {
       </div>
       <div className="flex flex-col items-center mt-10 md:w-3/4 lg:w-1/2 mx-auto p-">
         <p className="mb-4 text-center">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-          necessitatibus odit eos ea, iusto fuga aut iste atque possimus? Maxime
-          veniam sapiente adipisci eligendi pariatur, cumque iure odio rerum
-          dolorum.
+          Hi there! I'm Nick, a dedicated and enthusiastic software engineer
+          with a strong passion for creating innovative and impactful digital
+          solutions. I'm well-versed in both frontend and backend technologies.
+          I thrive in collaborative environments and love turning ideas into
+          reality. Let's work together to bring your projects to life!
         </p>
         <a
           href="#contact"
