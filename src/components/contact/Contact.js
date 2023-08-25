@@ -50,7 +50,6 @@ function Contact() {
     return emailPattern.test(inputs.email);
   };
 
-  console.log(process.env.REACT_APP_EMAILJS_USER_ID); // production
   return (
     <>
       <div id="contact" className="text-center w-full">
