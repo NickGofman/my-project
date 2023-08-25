@@ -47,7 +47,7 @@ function About() {
           reality. Let's work together to bring your projects to life!
         </p>
         <a
-          href="#contact"
+           href="#contact"
           className="btn bg-color-primary hover:bg-color-white hover:text-color-bg text-color-bg hover:--color-white transition-colors duration-300 ease-in-out p-2 rounded-md"
         >
           Let's Connect

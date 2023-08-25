@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="flex flex-col items-center ">
       <Header />
-      <main className="flex-1 bg-transparent justify-center space-y-36 ">
+      <main className="flex-1 bg-transparent justify-center space-y-36 mb-8 ">
         <About />
         <Experience />
         <Contact />
