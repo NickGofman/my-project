@@ -1,7 +1,7 @@
 import React from 'react';
 import CTA from './CTA';
 import HeaderSocials from './HeaderSocials';
-import nickolai_spitochom from '../../assets/Nick-removebg-preview.png';
+// import nickolai_spitochom from '../../assets/Nick-removebg-preview.png';
 
 function Header() {
   return (
@@ -11,7 +11,7 @@ function Header() {
       <CTA />
       <div className=" mt-8 ">
         <div className="flex flex-col items-center">
-          <img
+          {/* <img
             src={nickolai_spitochom}
             alt="me"
             className="w-64 rounded-full shadow-lg mx-auto"
@@ -21,7 +21,7 @@ function Header() {
               width: '50%',
               padding: '1rem',
             }}
-          />
+          /> */}
           <HeaderSocials />
         </div>
       </div>

@@ -3,12 +3,12 @@ import { BsPatchCheckFill } from 'react-icons/bs';
 
 const Experience = () => {
   return (
-    <section className="mt-8 w-3/4 ">
+    <section className="  items-center mt-8 ">
       <h5 className="text-center text-gray-600">What Skills I Have</h5>
       <h2 className="text-2xl text-color-primary text-center font-bold mb-4">
         My Experience
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-xl mx-auto ">
+      <div className="grid  w-3/4 grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-xl mx-auto ">
         <div className=" rounded-3xl bg-color-bg-variant bg-gray-100 p-6  shadow-md transition hover:bg-transparent hover:bg-blue-500 ">
           <h3 className="text-xl font-semibold mb-7 text-center text-primary text-color-primary ">
             Frontend Development
