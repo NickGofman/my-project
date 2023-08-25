@@ -55,17 +55,15 @@ function Contact() {
       <div id="contact" className="text-center w-full">
         <h1 className="text-4xl lg:text-6xl">Contact Form</h1>
       </div>
-      <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 mx-auto bg-gray-100 text-gray-900 rounded-lg">
+      <div className="max-w-screen-xl px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 mx-auto   rounded-lg">
         <div className="flex flex-col items-center text-center justify-around">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold leading-tight">
               Lets talk about everything!
             </h2>
-            <div className="text-gray-700 mt-8">
-              Hate forms? Send us an email instead.
-            </div>
+            <div className=" mt-8">Hate forms? Send us an email instead.</div>
           </div>
-          <div className="bg-color-bg-variant text-color-light   text-gray-600 p-8 rounded-xl flex flex-col items-center text-xl">
+          <div className="bg-color-bg-variant  p-8 rounded-xl flex flex-col items-center text-xl">
             <MdOutlineEmail className="text-4xl text-color-primary" />
             <h4>Email</h4>
             <h5>nikg1999@gmail.com</h5>
@@ -83,9 +81,7 @@ function Contact() {
           className="border-2 border-rose-500 "
         >
           <div>
-            <span className="uppercase text-sm text-gray-600 font-bold">
-              Full Name
-            </span>
+            <span className="uppercase text-sm  font-bold">Full Name</span>
             <input
               className="border-2 border-rose-500 border-spacing-3 w-full mt-2 p-3 rounded-lg focus:outline-none"
               type="text"
@@ -97,12 +93,10 @@ function Contact() {
             />
           </div>
           <div className="mt-8">
-            <span className="uppercase text-sm text-gray-600 font-bold">
-              Email
-            </span>
+            <span className="uppercase text-sm  font-bold">Email</span>
             <input
               required
-              className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none"
+              className="w-full   mt-2 p-3 rounded-lg focus:outline-none"
               type="text"
               name="email"
               placeholder="Email"
@@ -111,15 +105,13 @@ function Contact() {
             />
           </div>
           <div className="mt-8">
-            <span className="uppercase text-sm text-gray-600 font-bold">
-              Message
-            </span>
+            <span className="uppercase text-sm  font-bold">Message</span>
             <textarea
               required
               value={inputs.message}
               placeholder="Message"
               name="message"
-              className=" w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none "
+              className=" w-full h-32   mt-2 p-3 rounded-lg focus:outline-none "
               onChange={handleInputs}
             ></textarea>
           </div>{' '}
