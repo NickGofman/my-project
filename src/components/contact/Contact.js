@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { MdOutlineEmail } from 'react-icons/md';
 import emailjs from '@emailjs/browser';
 
@@ -9,51 +9,48 @@ function Contact() {
     message: '',
   });
   const [err, setErr] = useState('');
+  const form = useRef();
 
   const handleInputs = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (checkEmail(inputs)) {
-      await sendMail();
-    }
-  };
-
-  const sendMail = async () => {
-    if (inputs.email === '' || inputs.name === '' || inputs.message === '') {
-      setErr('You Must Fill All the fields');
-      console.log('if');
+    if (checkEmail()) {
+      setErr('');
+      sendEmail();
     } else {
-      try {
-        const response = await emailjs.send(
-          process.env.REACT_APP_EMAILJS_SERVICE_ID,
-          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-          {
-            to_name: inputs.email,
-            from_name: inputs.name,
-            message: inputs.message,
-            reply_to: inputs.email,
-          },
-          process.env.REACT_APP_EMAILJS_USER_ID // Replace with your user ID
-        );
-        setInputs({ name: '', email: '', message: '' });
-        setErr('');
-        console.log('Email sent successfully:', response);
-      } catch (error) {
-        setErr('Error sending email'); // Set an error message for sending email failure
-
-        console.error('Error sending email:', error);
-      }
+      setErr('Your Email Format is not good');
     }
   };
 
-  const checkEmail = (email) => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
+  const sendEmail = () => {
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setInputs({ name: '', email: '', message: '' });
+          setErr('');
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
-  console.log('err', inputs);
+
+  const checkEmail = () => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(inputs.email);
+  };
+
+  console.log(process.env.REACT_APP_EMAILJS_USER_ID); // production
   return (
     <>
       <div id="contact" className="text-center w-full">
@@ -73,15 +70,19 @@ function Contact() {
             <MdOutlineEmail className="text-4xl text-color-primary" />
             <h4>Email</h4>
             <h5>nikg1999@gmail.com</h5>
-            <button
+            <a
               className="text-color-primary-variant hover:text-color-primary mt-1"
               href="mailto:nikg1999@gmail.com"
             >
               send a message
-            </button>
+            </a>
           </div>
         </div>
-        <div className="border-2 border-rose-500 ">
+        <form
+          ref={form}
+          onSubmit={handleSubmit}
+          className="border-2 border-rose-500 "
+        >
           <div>
             <span className="uppercase text-sm text-gray-600 font-bold">
               Full Name
@@ -116,6 +117,7 @@ function Contact() {
             </span>
             <textarea
               required
+              value={inputs.message}
               placeholder="Message"
               name="message"
               className=" w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none "
@@ -123,16 +125,12 @@ function Contact() {
             ></textarea>
           </div>{' '}
           <div className="mt-8 text-color-primary">
-            <button
-              className="btn text-color-primary hover:bg-color-white hover:text-color-bg transition-colors duration-300 border-2 rounded-lg w-full focus:outline-none"
-              onClick={handleSubmit}
-            >
+            <button className="btn text-color-primary hover:bg-color-white hover:text-color-bg transition-colors duration-300 border-2 rounded-lg w-full focus:outline-none">
               Send Message
             </button>
-
-            {err && err}
+            <div className="text-color-error">{err && err}</div>
           </div>
-        </div>
+        </form>
       </div>
     </>
   );

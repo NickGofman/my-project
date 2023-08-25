@@ -10,6 +10,7 @@ module.exports = {
       'color-primary-variant': 'rgba(77, 181, 255, 0.4)',
       'color-white': '#fff',
       'color-light': 'rgba(255, 255, 255, 0.6)',
+      'color-error': '#ff0000',
     },
   },
   plugins: [],
