@@ -1,29 +1,76 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CTA from './CTA';
 import HeaderSocials from './HeaderSocials';
-// import nickolai_spitochom from '../../assets/Nick-removebg-preview.png';
+import nickolai_spitochom from '../../assets/Nick-removebg-preview.png';
+import { Typography } from '@material-tailwind/react';
+// import { ListSkills } from './ListSkills';
 
 function Header() {
+  const [socialsVisible, setSocialsVisible] = useState(false); // State to manage socials visibility
+
+  // Use useEffect to set socialsVisible to true after a delay
+  useEffect(() => {
+    setTimeout(() => {
+      setSocialsVisible(true);
+    }, 500); // Adjust the delay as needed
+  }, []);
   return (
-    <header className="flex  mt-8 mb-8 flex-col items-center">
-      <h1 className="text-3xl font-bold">Nick Gofman</h1>
-      <h5 className="text-color-light">SoftWare Developer</h5>
-      <CTA />
+    <header className="flex mt-8 mb-8 w-1/2 ml-10 mr-10 flex-col items-center ">
       <div className=" mt-8 ">
-        <div className="flex flex-col items-center">
-          {/* <img
+        <div className="flex space-y-8 lg:space-y-0 md:space-y-0 flex-col md:flex-row  md:space-x-8 lg:flex-row  lg:space-x-8 items-center text-center">
+          <div
+            className={`transition-transform ${
+              socialsVisible ? 'translate-x-0' : '-translate-x-full opacity-0'
+            } duration-1000 transform `}
+          ></div>
+          <img
             src={nickolai_spitochom}
             alt="me"
-            className="w-64 rounded-full shadow-lg mx-auto"
+            className={`transition-transform ${
+              socialsVisible ? 'translate-x-0' : '-translate-x-full opacity-0'
+            } duration-1000 transform w-64 rounded-full shadow-lg mx-auto`}
             style={{
               background: 'linear-gradient(var(--color-primary), transparent)',
-              borderRadius: '12rem 12rem 0 0',
-              width: '50%',
+              borderRadius: '12rem 12rem  12rem  12rem ',
+              // width: '50%',
               padding: '1rem',
             }}
-          /> */}
+          />
+          <div
+            className={`transition-transform ${
+              socialsVisible
+                ? 'translate-x--100 '
+                : 'translate-x-full opacity-0'
+            } duration-1000 transform flex flex-col `}
+          >
+            <h1 className="text-3xl font-bold">Nick Gofman</h1>
+            <Typography className="" variant="paragraph">
+              Greetings! I'm an avid software engineer with a genuine passion
+              for crafting innovative and impactful digital solutions.
+            </Typography>
+
+            <div className="mt-5">
+              <h3 className="text-lg font-semibold">Education</h3>
+
+              <h6 className="text-color-light hover:text-color-primary">
+                The National School for Practical Engineers at the Technion
+              </h6>
+              <h5 className="text-color-light hover:text-color-primary">
+                Practical Software Engineer
+              </h5>
+
+              <CTA />
+            </div>
+          </div>
+        </div>
+        <div
+          className={`transition-transform ${
+            socialsVisible ? 'translate-x-0' : '-translate-x-full opacity-0'
+          } duration-1000 transform `}
+        >
           <HeaderSocials />
         </div>
+        {/* <HeaderSocials /> */}
       </div>
     </header>
   );

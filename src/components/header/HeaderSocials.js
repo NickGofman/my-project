@@ -3,7 +3,7 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs';
 
 function HeaderSocials() {
   return (
-    <div className="flex flex-row space-x-14 mb-10 mt-10">
+    <div className="flex flex-row space-x-14 mb-10 mt-10 justify-center">
       <a
         href="https://www.linkedin.com/in/nick-gofman-israel/"
         target="_blank"

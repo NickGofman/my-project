@@ -10,7 +10,7 @@ function CarouselTransition() {
   return (
     <Carousel
       autoplay={true}
-      autoplayDelay="5000"
+      autoplayDelay= {5000}
       transition={{ duration: 2 }}
       className="rounded-xl "
     >
