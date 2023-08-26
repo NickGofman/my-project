@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="flex  mt-8 mb-8 flex-col items-center">
       <h1 className="text-3xl font-bold">Nick Gofman</h1>
-      <h5 className="text-color-light">FullStack Developer</h5>
+      <h5 className="text-color-light">SoftWare Developer</h5>
       <CTA />
       <div className=" mt-8 ">
         <div className="flex flex-col items-center">
