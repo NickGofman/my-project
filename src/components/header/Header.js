@@ -15,9 +15,9 @@ function Header() {
     }, 500); // Adjust the delay as needed
   }, []);
   return (
-    <header className="flex mt-8 mb-8 w-1/2 ml-10 mr-10 flex-col items-center ">
+    <header className="flex mt-8 mb-8 w-1/2 ml-10 mr-10 flex-col  ">
       <div className=" mt-8 ">
-        <div className="flex space-y-8 lg:space-y-0 md:space-y-0 flex-col md:flex-row  md:space-x-8 lg:flex-row  lg:space-x-8 items-center text-center">
+        <div className="flex space-y-8 lg:space-y-0 md:space-y-0 flex-col md:flex-row  md:space-x-8 lg:flex-row  lg:space-x-8 items-center text-center justify-center">
           <div
             className={`transition-transform ${
               socialsVisible ? 'translate-x-0' : '-translate-x-full opacity-0'
@@ -28,7 +28,7 @@ function Header() {
             alt="me"
             className={`transition-transform ${
               socialsVisible ? 'translate-x-0' : '-translate-x-full opacity-0'
-            } duration-1000 transform w-64 rounded-full shadow-lg mx-auto`}
+            } hover:scale-105 duration-1000 transform w-64 rounded-full shadow-lg mx-auto`}
             style={{
               background: 'linear-gradient(var(--color-primary), transparent)',
               borderRadius: '12rem 12rem  12rem  12rem ',
@@ -50,12 +50,12 @@ function Header() {
             </Typography>
 
             <div className="mt-5">
-              <h3 className="text-lg font-semibold">Education</h3>
+              <h3 className="text-lg text-color-primary">Education</h3>
 
-              <h6 className="text-color-light hover:text-color-primary">
+              <h6 className="text-color-light hover:text-color-white">
                 The National School for Practical Engineers at the Technion
               </h6>
-              <h5 className="text-color-light hover:text-color-primary">
+              <h5 className="text-color-light hover:text-color-white">
                 Practical Software Engineer
               </h5>
 

@@ -15,19 +15,19 @@ function CTA() {
     <div
       className={`transition-transform ${
         socialsVisible ? 'translate-x--100 ' : 'translate-x-full opacity-0'
-      } duration-1000 transform`}
+      } duration-1000 transform `}
     >
       <div className="  flex items-center justify-center  mt-8 md:flex-row flex-col md:space-y-0 space-y-2  ">
         <a
           href={cvFile}
           download="NickGofman_Resume.pdf"
-          className="btn  m-0  text-color-primary hover:bg-color-white hover:text-color-bg  md:mr-4 transition-colors duration-300 ease-in-out p-4 rounded-md border-2"
+          className="btn  m-0  text-color-primary hover:bg-color-white hover:text-color-bg  md:mr-4 transition-colors duration-300 ease-in-out p-4 rounded-md border-2 hover:scale-105"
         >
           Download CV
         </a>
         <a
           href="#contact"
-          className="btn  m-0 bg-color-primary hover:bg-color-white hover:text-color-bg text-color-bg hover:--color-white transition-colors duration-300 ease-in-out p-4 rounded-md"
+          className="btn  m-0 bg-color-primary hover:bg-color-white hover:text-color-bg text-color-bg hover:--color-white transition-colors duration-300 ease-in-out p-4 rounded-md hover:scale-105"
         >
           Let's Talk
         </a>

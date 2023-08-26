@@ -9,14 +9,14 @@ function HeaderSocials() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <BsLinkedin className="lg:text-8xl text-6xl hover:text-color-primary " />
+        <BsLinkedin className="text-8xl duration-300 hover:scale-105 hover:text-color-primary " />
       </a>
       <a
         href="https://github.com/NickGofman"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <BsGithub className="lg:text-8xl text-6xl hover:text-color-primary" />
+        <BsGithub className="text-8xl duration-300 hover:scale-105 hover:text-color-primary" />
       </a>
     </div>
   );
