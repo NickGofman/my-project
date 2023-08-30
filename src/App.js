@@ -13,10 +13,11 @@ function App() {
       <Header />
       <main className="flex flex-col flex-1 items-center bg-transparent justify-center space-y-36 mb-8 ">
         <About />
-        <Experience />
         <Portfolio />
+        <Experience />
         <Contact />
       </main>
+   
       <Footer />
     </div>
   );

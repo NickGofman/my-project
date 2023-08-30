@@ -1,13 +1,12 @@
 import React from 'react';
-import { FaAward, FaLightbulb, FaBrain } from 'react-icons/fa';
-
+import { ListSkills } from '../header/ListSkills';
 function About() {
   return (
-    <section id="about" className="mt-8">
+    <section id="about" className="mt-8 flex flex-col items-center">
       <h5 className="text-center text-gray-600">Get To Know</h5>
       <h2 className="text-2xl text-center font-bold mb-4">About Me</h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-screen-lg p-3 mx-auto">
+      <ListSkills/>
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-screen-lg p-3 mx-auto">
         <article className="bg-color-bg-variant  border-transparent rounded-lg p-10 text-center transition hover:border-color-primary  border-solid border-2   hover:scale-105">
           <div className="flex flex-col items-center justify-center h-full">
             <FaLightbulb className="text-color-primary text-2xl md:mb-4" />
@@ -45,7 +44,7 @@ function About() {
         >
           Let's Connect
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -14,6 +14,7 @@ module.exports = withMT({
       'color-light': 'rgba(255, 255, 255, 0.6)',
       'color-error': '#ff0000',
     },
+    
   },
   plugins: [],
 });

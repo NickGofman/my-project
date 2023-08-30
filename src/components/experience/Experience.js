@@ -8,14 +8,14 @@ const Experience = () => {
       <h2 className="text-2xl text-color-primary text-center font-bold mb-4">
         My Experience
       </h2>
-      <div className="grid  w-3/4 grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-xl mx-auto ">
-        <div className=" rounded-3xl bg-color-bg-variant  p-6  shadow-md transition hover:bg-transparent hover:bg-blue-500 ">
+      <div className="grid  grid-cols-1 md:grid-cols-2 gap-8 max-w-screen-xl mx-auto ">
+        <div className="  rounded-3xl bg-color-bg-variant  p-6  shadow-md transition hover:bg-transparent hover:bg-blue-500 ">
           <h3 className="text-xl font-semibold mb-7 text-center text-primary text-color-primary ">
             Frontend Development
           </h3>
           <div className="grid grid-cols-2 gap-4 flex-grow justify-items-center">
             {/* Frontend development details */}
-            <article className="flex items-center gap-2">
+            <article className="flex items-center gap-2 ">
               <BsPatchCheckFill className="text-blue-500  text-color-primary" />
               <div>
                 <h4 className="font-semibold">HTML</h4>

@@ -52,9 +52,11 @@ function Header() {
             <div className="mt-5">
               <h3 className="text-lg text-color-primary">Education</h3>
 
-              <h6 className="text-color-light hover:text-color-white">
-                The National School for Practical Engineers at the Technion
-              </h6>
+              <a href="https://www.pet.ac.il/" target="blank">
+                <h6 className="text-color-light hover:text-color-white">
+                  The National School for Practical Engineers at the Technion
+                </h6>
+              </a>
               <h5 className="text-color-light hover:text-color-white">
                 Practical Software Engineer
               </h5>
